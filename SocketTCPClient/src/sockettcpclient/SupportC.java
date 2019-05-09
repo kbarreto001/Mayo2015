@@ -59,14 +59,15 @@ public class SupportC {
 
     public void GuardarFicheroB(File FICHEROB, String infoFinal) throws FileNotFoundException, IOException {
         try (
-            DataOutputStream dos = new DataOutputStream(new FileOutputStream(FICHEROB));) {
+                DataOutputStream dos = new DataOutputStream(new FileOutputStream(FICHEROB));) {
             dos.writeUTF(infoFinal);
         }
     }
-    
-    public File ficheroFinal(String nombreFinal){
+
+    public File ficheroFinal(String nombreFinal) {
         File FICHEROB;
-        nombreFinal = nombreFinal.replace("T", "B");        
+        nombreFinal = nombreFinal.replace("T", "B");
+        nombreFinal = nombreFinal.replace("txt", "dat");        
         return FICHEROB = new File(nombreFinal);
     }
 

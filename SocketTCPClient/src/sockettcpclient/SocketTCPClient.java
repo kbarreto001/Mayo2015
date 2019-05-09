@@ -8,7 +8,7 @@ import java.net.Socket;
 
 public class SocketTCPClient {
     
-    protected static File FICHEROT = new File("File02T.txt");    
+    protected static File FICHEROT = new File("File01T.txt");    
 
     public static void main(String[] args) throws IOException {
         String[] ficheroVolcado;
