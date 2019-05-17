@@ -21,11 +21,23 @@ public class Implementation extends UnicastRemoteObject implements ServidorInter
         System.arraycopy(tmp1, 2, tmp2, 0, tmp2.length);       
        
         int nMax = 0;
+        int ilong = 0;
+        int counter = 0;
         
         for (int i = 0; i < tmp2.length; i++) {
-            if((Integer.parseInt(tmp2[i]))>nMax){
-                nMax=Integer.parseInt(tmp2[i]);
-            }                     
+            if(counter==ilong)
+            {
+                ilong=Integer.parseInt(tmp2[i]);
+                counter=0;
+            }
+            else
+            {
+                counter=counter+1;
+                System.out.println(Integer.parseInt(tmp2[i]));
+                if((Integer.parseInt(tmp2[i]))>nMax){
+                    nMax=Integer.parseInt(tmp2[i]);
+                }        
+            }
         }
         return "Maximo es: "+String.valueOf(nMax);
 
